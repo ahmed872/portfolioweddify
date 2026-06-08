@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weddify | Premium Digital Invitations</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* لون كحلي غامق جداً يطابق خلفية اللوجو */
+            --bg-color: #0b101e; 
+            /* لون الـ Rose Gold الخاص باللوجو */
+            --rose-gold: #dfb29e; 
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(223, 178, 158, 0.15);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            /* تأثير إضاءة خفيف في الخلفية بنفس درجة الكحلي */
+            background-image: radial-gradient(circle at top right, #161e31 0%, transparent 50%),
+                              radial-gradient(circle at bottom left, #080b14 0%, transparent 50%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .link-tree-container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* تنسيق صورة اللوجو */
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--rose-gold);
+            padding: 3px;
+            margin: 0 auto;
+            box-shadow: 0 0 35px rgba(223, 178, 158, 0.15);
+            background-color: var(--bg-color);
+        }
+
+        .font-luxury { font-family: 'Cinzel Decorative', serif; }
+
+        .theme-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: white;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* تأثير اللمعة عند تمرير الماوس */
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(223, 178, 158, 0.1), transparent);
+            transition: all 0.6s ease;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(223, 178, 158, 0.6);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.6), 0 0 20px rgba(223, 178, 158, 0.15);
+        }
+
+        .theme-card:hover::before {
+            left: 100%;
+        }
+
+        .theme-icon {
+            width: 45px; height: 45px;
+            background: rgba(223, 178, 158, 0.1);
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            color: var(--rose-gold);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            color: #6b7280;
+            font-size: 1.6rem;
+            transition: all 0.3s;
+        }
+        .social-icon:hover { 
+            color: var(--rose-gold); 
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="link-tree-container">
+        
+        <!-- الهيدر (صورة اللوجو واسم البراند) -->
+        <div class="text-center mb-4">
+            <!-- تأكد إن صورة اللوجو اسمها logo.jpg وموجودة في نفس الفولدر -->
+            <img src="logo.jpeg" alt="Weddify Logo" class="profile-pic mb-5">
+            <h1 class="font-luxury text-3xl mb-2 tracking-wide" style="color: var(--rose-gold);">WEDDIFY</h1>
+            <p class="text-[11px] text-gray-400 tracking-[0.25em] uppercase">Elegant Digital Invitations</p>
+        </div>
+
+        <!-- المشاريع (الثيمات) -->
+        <div class="flex flex-col gap-4">
+            
+            <!-- الثيم الأول: الكلاسيكي -->
+            <a href="https://wedding-invitation-five-eta-35.vercel.app/" target="_blank" class="theme-card">
+                <div class="flex items-center gap-4">
+                    <div class="theme-icon"><i class="fa-solid fa-gem"></i></div>
+                    <div>
+                        <h2 class="font-bold text-lg">Classic Elegance</h2>
+                        <p class="text-xs text-gray-400 mt-1">دعوة زفاف كلاسيكية راقية</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-sm"></i>
+            </a>
+
+            <!-- الثيم الثاني: السينمائي (العرض الخاص) -->
+            <a href="https://wedding-alpha-inky.vercel.app/" target="_blank" class="theme-card">
+                <div class="flex items-center gap-4">
+                    <div class="theme-icon"><i class="fa-solid fa-ticket"></i></div>
+                    <div>
+                        <h2 class="font-bold text-lg">Cinematic Premiere</h2>
+                        <p class="text-xs text-gray-400 mt-1">دعوة بتصميم تذكرة العرض الخاص</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-sm"></i>
+            </a>
+
+            <!-- لينك الواتساب للحجوزات -->
+            <a href="#" target="_blank" class="theme-card" style="border-color: rgba(37, 211, 102, 0.2);">
+                <div class="flex items-center gap-4">
+                    <div class="theme-icon" style="color: #25D366; background: rgba(37, 211, 102, 0.1);"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div>
+                        <h2 class="font-bold text-lg">Book Your Design</h2>
+                        <p class="text-xs text-gray-400 mt-1">تواصل معنا لتصميم دعوتك الخاصة</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-500 text-sm"></i>
+            </a>
+
+        </div>
+
+        <!-- السوشيال ميديا -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/weddify_1?igsh=dzRkZGk3YXltY2c=" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@weddify1?is_from_webapp=1&sender_device=pc" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-behance"></i></a>
+        </div>
+
+    </div>
+
+</body>
+</html>
